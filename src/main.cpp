@@ -17,11 +17,13 @@ void test_taylor_sine(double x, int n) {
 
     printf("x = %lf   n = %d\ntaylor sine = %lf   ANSI_sine = %lf\n", x, n,
            taylor_sin, ANSI_sine);
-    // 0.01 er cifrte fra, precision
+    // it has to be inside of 0.01 of the ANSI sin
     if (precision > 0.01) {
         printf("Test case failed\n");
     } else {
-        printf("Test case succeded\n");
+        printf("\033[0;32m");
+        printf("-----Test case succeded-----\n");
+        printf("\033[0m");
     }
 }
 
@@ -38,7 +40,9 @@ void test_stack(void) {
     initialize(&s);
     printf("Testing (A) Asserting the stack is empty upon initialization\n");
     assert(empty(&s));
-    printf("Successful\n");
+    printf("\033[0;32m");
+    printf("-----Successful-----\n");
+    printf("\033[0m");
 
     printf("Testing (B), pushing x and asserting it is equal to pop(s)\n");
     int x = 5;
@@ -46,7 +50,9 @@ void test_stack(void) {
     push(x, &s);
     y = pop(&s);
     assert(x == y && empty(&s));
-    printf("Successful\n");
+    printf("\033[0;32m");
+    printf("-----Successful-----\n");
+    printf("\033[0m");
 
     printf("Testing (C) pushing and popping\n");
     int x0 = 1;
@@ -57,7 +63,9 @@ void test_stack(void) {
     y0 = pop(&s);
     y1 = pop(&s);
     assert(empty(&s) && x0 == y1 && x1 == y0);
-    printf("Successful\n\n");
+    printf("\033[0;32m");
+    printf("-----Successful-----\n\n");
+    printf("\033[0m");
 }
 
 int main(int argc, char **argv) {
