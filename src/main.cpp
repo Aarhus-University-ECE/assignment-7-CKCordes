@@ -45,7 +45,7 @@ void test_stack(void) {
     int y;
     push(x, &s);
     y = pop(&s);
-    assert(x == y);
+    assert(x == y && empty(&s));
     printf("Successful\n");
 
     printf("Testing (C) pushing and popping\n");
