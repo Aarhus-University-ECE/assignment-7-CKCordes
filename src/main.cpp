@@ -3,9 +3,6 @@
 #include <stdbool.h>
 #include <stdio.h>
 
-// Kan ikke få det til at virke med at include .h
-//#include "../include/stack.h"
-//#include "../include/taylor_sine.h"
 #include "stack.c"
 #include "taylor_sine.c"
 
